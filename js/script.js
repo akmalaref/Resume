@@ -1,35 +1,25 @@
-// Akmal Aref portfolio — scroll-spy for the circuit trace navigation.
-// Highlights the nav node matching the section currently in view.
+/* ============================================================
+   SHARED SITE SCRIPT
+   Linked by every page. Right now it does one job: opens and
+   closes the mobile navigation menu (the "Menu" button that
+   appears on narrow screens).
+   ============================================================ */
 
-(function () {
-  const sections = document.querySelectorAll('main .station');
-  const navLinks = document.querySelectorAll('.trace-nav a');
+// Wait for the page to load, then wire up the menu button.
+document.addEventListener('DOMContentLoaded', function () {
 
-  if (!sections.length || !navLinks.length) return;
+  // Find this page's menu button and the list of links it controls.
+  var toggleButton = document.getElementById('nav-toggle');
+  var linksList = document.getElementById('nav-links');
 
-  const linkByHref = new Map();
-  navLinks.forEach((link) => {
-    linkByHref.set(link.getAttribute('href'), link);
+  // Some pages might not have a menu button — stop safely if so.
+  if (!toggleButton || !linksList) return;
+
+  // When the button is clicked, show/hide the links and flip the
+  // aria-expanded flag (screen readers use this to announce state).
+  toggleButton.addEventListener('click', function () {
+    var isOpen = linksList.classList.toggle('is-open');
+    toggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 
-  const setActive = (id) => {
-    navLinks.forEach((link) => link.classList.remove('is-active'));
-    const active = linkByHref.get('#' + id);
-    if (active) active.classList.add('is-active');
-  };
-
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: '-40% 0px -50% 0px', threshold: 0 }
-    );
-
-    sections.forEach((section) => observer.observe(section));
-  }
-})();
+});

@@ -1,0 +1,35 @@
+/* ============================================================
+   SHARED DESIGN TOKENS
+   Every page links this file first. Change a value here and it
+   updates everywhere it's used — this is the one place to edit
+   colors, fonts, and spacing for the whole site.
+   ============================================================ */
+
+:root {
+  /* ---- Colors ---- */
+  --color-bg: #FAF9F6;                 /* page background — warm off-white paper */
+  --color-bg-deep: #12232F;            /* dark band used in header/footer */
+  --color-surface: #FFFFFF;            /* card / panel background */
+  --color-border: #E4E1D8;             /* thin rule lines and card borders */
+  --color-text: #20262B;               /* main body text */
+  --color-text-soft: #5B6670;          /* secondary / muted text */
+  --color-text-on-dark: #F3F1EA;       /* text placed on the dark band */
+  --color-text-on-dark-soft: #A9B4BC;  /* muted text on the dark band */
+  --color-accent: #1F4E5F;             /* primary accent — matches the CV documents' brand color */
+  --color-accent-soft: #E7EEF0;        /* pale accent background (chips, hover states) */
+  --color-gold: #B8925A;               /* secondary accent used sparingly (dividers, highlights) */
+
+  /* ---- Type ---- */
+  --font-display: 'Fraunces', serif;     /* headings — elegant serif */
+  --font-body: 'Inter', sans-serif;      /* body text and UI */
+
+  /* ---- Layout ---- */
+  --max-width: 1080px;      /* overall page content width */
+  --max-width-doc: 760px;   /* narrower width for CV reading pages */
+  --radius: 6px;            /* corner rounding used on cards/buttons */
+}
+
+/* Respect users who've asked for less motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}

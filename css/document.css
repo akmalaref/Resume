@@ -1,0 +1,110 @@
+/* ============================================================
+   DOCUMENT STYLES — used only by the CV reading pages
+   (Executive CV, ATS-Unified CV). Plain, quiet, paper-like —
+   no decorative background, styled like a well-typeset document.
+   Requires variables.css linked first.
+   ============================================================ */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #FFFFFF;                 /* pure white "paper" background — deliberately plain */
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Small top bar with just a "back home" link — no full nav here, keeps the page quiet */
+.doc-topbar {
+  max-width: var(--max-width-doc);
+  margin: 0 auto;
+  padding: 24px 24px 0;
+}
+
+.doc-back {
+  font-size: 13.5px;
+  text-decoration: none;
+  color: var(--color-text-soft);
+}
+
+.doc-back:hover { color: var(--color-accent); }
+
+/* Main document column — narrow, centered, like a printed page */
+.doc-page {
+  max-width: var(--max-width-doc);
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+.doc-header { text-align: center; margin-bottom: 48px; }
+
+.doc-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin: 0 0 6px;
+}
+
+.doc-role {
+  font-size: 15px;
+  color: var(--color-text-soft);
+  margin: 0 0 14px;
+}
+
+.doc-contact {
+  font-size: 13px;
+  color: var(--color-text-soft);
+}
+
+.doc-section { margin-bottom: 40px; }
+
+.doc-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-border);     /* quiet single rule under each heading */
+  padding-bottom: 8px;
+  margin: 0 0 16px;
+}
+
+.doc-section p { margin: 0 0 14px; color: var(--color-text); }
+
+.doc-list { margin: 0; padding-left: 20px; }
+
+.doc-list li { margin-bottom: 8px; font-size: 15px; }
+
+.doc-role-block { margin-bottom: 26px; }
+
+.doc-role-block:last-child { margin-bottom: 0; }
+
+.doc-role-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+
+.doc-role-title { font-weight: 600; font-size: 15.5px; }
+
+.doc-role-dates { font-size: 13px; color: var(--color-text-soft); white-space: nowrap; }
+
+.doc-role-org { font-size: 13.5px; color: var(--color-text-soft); margin: 2px 0 8px; }
+
+.doc-skill-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+}
+
+.doc-skill-row:last-child { border-bottom: none; }
+
+.doc-skill-label { font-weight: 600; color: var(--color-accent); }
+
+@media (max-width: 560px) {
+  .doc-skill-row { grid-template-columns: 1fr; gap: 2px; }
+}

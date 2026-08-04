@@ -3,368 +3,234 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Akmal Aref — Section Head | Service Management · Product Management · Manufacturing &amp; PCBA Test</title>
-<meta name="description" content="Portfolio of Akmal Aref — Electrical &amp; Electronics Engineer, 11+ years across service management, product management, and PCBA manufacturing test." />
+<title>Akmal Aref — Section Head | Service Management · Product Management · Manufacturing & PCBA Test</title>
+<meta name="description" content="Portfolio of Akmal Aref — Electrical & Electronics Engineer, 11+ years across service management, product management, and PCBA manufacturing test." />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- variables.css MUST come before site.css — site.css uses the variables it defines -->
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 
-  <!-- Background layers -->
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-glow" aria-hidden="true"></div>
-
-  <!-- Circuit trace spine (nav + signature element) -->
-  <nav class="trace-nav" aria-label="Section navigation">
-    <svg class="trace-line" viewBox="0 0 40 1200" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M20 0 L20 1200" />
-    </svg>
-    <ul>
-      <li><a href="#summary" data-label="TS-01"><span class="node"></span><span class="node-label">Summary</span></a></li>
-      <li><a href="#competencies" data-label="TS-02"><span class="node"></span><span class="node-label">Competencies</span></a></li>
-      <li><a href="#experience" data-label="TS-03"><span class="node"></span><span class="node-label">Experience</span></a></li>
-      <li><a href="#education" data-label="TS-04"><span class="node"></span><span class="node-label">Education</span></a></li>
-      <li><a href="#skills" data-label="TS-05"><span class="node"></span><span class="node-label">Skills</span></a></li>
-      <li><a href="#certifications" data-label="TS-06"><span class="node"></span><span class="node-label">Certifications</span></a></li>
-      <li><a href="#documents" data-label="TS-07"><span class="node"></span><span class="node-label">Documents</span></a></li>
-      <li><a href="#contact" data-label="TS-08"><span class="node"></span><span class="node-label">Contact</span></a></li>
-    </ul>
-  </nav>
-
-  <header class="hero">
-    <div class="hero-inner">
-      <p class="eyebrow">// DUT-2026 · ENGINEERING PROFILE</p>
-      <h1>AKMAL AREF</h1>
-      <p class="hero-role">Section Head — Service Management · Product Management · Manufacturing &amp; PCBA Test</p>
-
-      <svg class="scope-trace" viewBox="0 0 600 80" preserveAspectRatio="none" aria-hidden="true">
-        <polyline class="scope-path" points="0,40 40,40 55,10 70,70 85,40 130,40 150,40 165,15 180,65 195,40 240,40 600,40" />
-      </svg>
-
-      <div class="hero-meta">
-        <span class="status-chip"><span class="dot"></span> Immediately Available</span>
-        <span class="meta-item">Cairo, Egypt</span>
-        <span class="meta-item">Open to Relocation Worldwide — Visa Sponsorship</span>
-      </div>
-
-      <div class="hero-links">
-        <a class="btn btn-primary" href="documents/Akmal_Aref_CV_Unified_Formatted.docx" download>Download Full CV</a>
-        <a class="btn btn-ghost" href="mailto:akmalaref@icloud.com">akmalaref@icloud.com</a>
-        <a class="btn btn-ghost" href="https://linkedin.com/in/akmalaref" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
+  <!-- ============ HEADER / NAVIGATION ============
+       This same header is pasted at the top of every page on the site.
+       EDIT the links here (and copy the change into the other pages)
+       if you rename or add a page. -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Akmal Aref</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#summary">Summary</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="cv/executive.html">Executive CV</a></li>
+        <li><a href="cv/ats-unified.html">ATS CV</a></li>
+        <li><a href="index.html#tracks">CV by Track</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
     </div>
   </header>
 
-  <main>
 
-    <!-- TS-01 SUMMARY -->
-    <section id="summary" class="station">
-      <div class="station-head">
-        <span class="station-code">[TS-01]</span>
-        <h2>Professional Summary</h2>
-      </div>
-      <div class="station-body">
-        <p>
-          Electrical and Electronics Engineer with nearly 11 years of industry experience across the smart
-          metering and industrial electronics sector, spanning PCBA manufacturing and functional test
-          engineering, technical support and service management leadership, and product management.
-          Progressed through five roles over 10+ consecutive years at El Sewedy Electric – Iskraemeco:
-          7.5 years in technical support, rising from field engineer to team leader serving Egypt's
-          Electricity &amp; Water Holding Companies and private utilities; 1 year as Product Manager owning
-          the electricity meter product lifecycle; 1.5 years leading Functional Circuit Test (FCT)
-          operations on a high-volume PCBA production line; and an early foundation in industrial
-          electrical maintenance.
-        </p>
-        <p>
-          Holds a B.Sc. in Industrial Electronics &amp; Control Engineering. Immediately available and
-          now seeking a Section Head-level position — in Service Management, Product Management, or
-          Manufacturing/PCBA Test — that continues this 10+ year career trajectory. Open to relocating
-          internationally, including visa sponsorship, with particular interest in opportunities across Europe.
-        </p>
-        <a class="doc-link" href="documents/Akmal_Aref_CV_Unified_Formatted.docx" download>
-          <span class="pin"></span> View full recruiter CV (.docx)
-        </a>
-      </div>
-    </section>
+  <!-- ============ HERO ============
+       EDIT: your name, target roles, and availability status live here. -->
+  <section class="hero">
+    <p class="hero-eyebrow">Engineering &amp; Leadership Profile</p>
+    <h1>Akmal Aref</h1>
+    <p class="hero-role">
+      Section Head — Service Management · Product Management · Manufacturing &amp; PCBA Test
+    </p>
+    <hr class="hero-divider" />
 
-    <!-- TS-02 CORE COMPETENCIES -->
-    <section id="competencies" class="station">
-      <div class="station-head">
-        <span class="station-code">[TS-02]</span>
-        <h2>Core Competencies</h2>
-      </div>
-      <div class="station-body">
-        <ul class="chip-grid">
-          <li>FCT / ICT / AOI Test Operations &amp; FPY Optimization</li>
-          <li>Root Cause Analysis (RCA) &amp; ISO 9001 CAPA/NCR</li>
-          <li>Test Fixture Design &amp; Automated Test Systems</li>
-          <li>Product Lifecycle Management &amp; PRD/BRD Ownership</li>
-          <li>Go-to-Market Planning &amp; Cross-functional Leadership</li>
-          <li>Escalation Management (L1/L2/L3) &amp; SLA Governance</li>
-          <li>SQL-driven Diagnostics &amp; Data Analysis</li>
-          <li>AMI/AMR Smart Meter Infrastructure &amp; Utility Operations</li>
-          <li>PLC, Embedded Systems &amp; Hardware Diagnostics</li>
-          <li>Team Supervision, KPI Design &amp; Technical Training</li>
-        </ul>
-        <a class="doc-link" href="documents/17_Skills_Matrix.docx" download>
-          <span class="pin"></span> View full Skills Matrix (.docx)
-        </a>
-      </div>
-    </section>
+    <div class="hero-meta">
+      <!-- EDIT: remove this pill once you're no longer immediately available -->
+      <span class="status-pill"><span class="dot"></span> Immediately Available</span>
+      <span>Cairo, Egypt</span>
+      <span>Open to Relocation Worldwide — Visa Sponsorship</span>
+    </div>
 
-    <!-- TS-03 EXPERIENCE -->
-    <section id="experience" class="station">
-      <div class="station-head">
-        <span class="station-code">[TS-03]</span>
-        <h2>Professional Experience</h2>
-      </div>
-      <div class="station-body">
-        <ol class="timeline">
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="cv/executive.html">Read Executive CV</a>
+      <a class="btn btn-ghost" href="mailto:akmalaref@icloud.com">akmalaref@icloud.com</a>
+      <a class="btn btn-ghost" href="https://linkedin.com/in/akmalaref" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </section>
 
-          <li class="timeline-item">
-            <div class="timeline-node"></div>
-            <div class="timeline-content">
-              <div class="role-head">
-                <h3>PCBA Functional Test Section Head</h3>
-                <span class="dates">Mar 2025 – Jul 2026</span>
-              </div>
-              <p class="org">El Sewedy Electric – Iskraemeco Inc.</p>
-              <ul>
-                <li>Led Functional Circuit Test (FCT) operations for electricity meter PCBAs on a high-volume production line, operating automated test systems from SPEA, MATECH, INGUN &amp; NOFFZ.</li>
-                <li>Drove root cause analysis (RCA) and First Pass Yield (FPY) improvement under ISO 9001; managed NPI validation and engineering change orders (ECOs) with R&amp;D.</li>
-              </ul>
-              <a class="doc-link small" href="documents/Akmal_Aref_FCT_Manufacturing_ATS.docx" download><span class="pin"></span> Tailored CV for this track</a>
-            </div>
-          </li>
 
-          <li class="timeline-item">
-            <div class="timeline-node"></div>
-            <div class="timeline-content">
-              <div class="role-head">
-                <h3>Product Manager — Smart Metering</h3>
-                <span class="dates">Mar 2024 – Feb 2025</span>
-              </div>
-              <p class="org">El Sewedy Electric – Iskraemeco Inc.</p>
-              <ul>
-                <li>Owned end-to-end lifecycle of the single/three-phase AMI/AMR meter portfolio: requirements gathering, PRDs, go-to-market execution, and field pilots with national utilities.</li>
-                <li>Tracked product KPIs and managed engineering change requests (ECRs) across R&amp;D, manufacturing, and commercial teams.</li>
-              </ul>
-              <a class="doc-link small" href="documents/Akmal_Aref_ProductManager_ATS.docx" download><span class="pin"></span> Tailored CV for this track</a>
-            </div>
-          </li>
+  <!-- ============ SUMMARY ============ -->
+  <section class="section" id="summary">
+    <h2 class="section-title">Professional Summary</h2>
+    <p class="section-intro" style="max-width:72ch;">
+      Electrical and Electronics Engineer with nearly 11 years of industry experience across the smart
+      metering and industrial electronics sector, spanning PCBA manufacturing and functional test
+      engineering, technical support and service management leadership, and product management.
+      Progressed through five roles over 10+ consecutive years at El Sewedy Electric – Iskraemeco: 7.5
+      years in technical support, rising from field engineer to team leader serving Egypt's Electricity
+      &amp; Water Holding Companies and private utilities; 1 year as Product Manager owning the electricity
+      meter product lifecycle; 1.5 years leading Functional Circuit Test (FCT) operations on a high-volume
+      PCBA production line; and an early foundation in industrial electrical maintenance. Holds a B.Sc. in
+      Industrial Electronics &amp; Control Engineering. Immediately available and now seeking a Section
+      Head-level position, open to relocating internationally with particular interest in Europe.
+    </p>
 
-          <li class="timeline-item">
-            <div class="timeline-node"></div>
-            <div class="timeline-content">
-              <div class="role-head">
-                <h3>Service Management Section Head (Technical Support Team Leader)</h3>
-                <span class="dates">Jan 2020 – Feb 2024</span>
-              </div>
-              <p class="org">El Sewedy Electric – Iskraemeco Inc.</p>
-              <ul>
-                <li>Directed a multi-disciplinary support team serving national utilities and private clients; designed an L1/L2/L3 escalation framework that cut mean time to resolution (MTTR).</li>
-                <li>Ran SQL-driven root cause analysis and delivered technical training programs for field engineers.</li>
-              </ul>
-              <a class="doc-link small" href="documents/Akmal_Aref_Service_Management_ATS.docx" download><span class="pin"></span> Tailored CV for this track</a>
-            </div>
-          </li>
+    <!-- EDIT: add/remove <li> items — the grid re-flows automatically -->
+    <ul class="chip-grid">
+      <li>FCT / ICT / AOI Test Operations &amp; FPY Optimization</li>
+      <li>Root Cause Analysis (RCA) &amp; ISO 9001 CAPA/NCR</li>
+      <li>Test Fixture Design &amp; Automated Test Systems</li>
+      <li>Product Lifecycle Management &amp; PRD/BRD Ownership</li>
+      <li>Go-to-Market Planning &amp; Cross-functional Leadership</li>
+      <li>Escalation Management (L1/L2/L3) &amp; SLA Governance</li>
+      <li>SQL-driven Diagnostics &amp; Data Analysis</li>
+      <li>AMI/AMR Smart Meter Infrastructure &amp; Utility Operations</li>
+      <li>PLC, Embedded Systems &amp; Hardware Diagnostics</li>
+      <li>Team Supervision, KPI Design &amp; Technical Training</li>
+    </ul>
+  </section>
 
-          <li class="timeline-item">
-            <div class="timeline-node"></div>
-            <div class="timeline-content">
-              <div class="role-head">
-                <h3>Technical Support Senior Engineer / Engineer</h3>
-                <span class="dates">Jul 2016 – Dec 2019</span>
-              </div>
-              <p class="org">El Sewedy Electric – Iskraemeco Inc.</p>
-              <ul>
-                <li>Delivered field and remote support across the national AMI rollout; collaborated directly with software teams to resolve firmware/platform bugs within sprint cycles.</li>
-              </ul>
-            </div>
-          </li>
 
-          <li class="timeline-item">
-            <div class="timeline-node"></div>
-            <div class="timeline-content">
-              <div class="role-head">
-                <h3>Maintenance &amp; Production Engineer / Electrical Maintenance Engineer</h3>
-                <span class="dates">Sep 2015 – Jun 2016</span>
-              </div>
-              <p class="org">El Sewedy Electric – Iskraemeco Inc. / New AlphaTex</p>
-              <ul>
-                <li>Production line balancing, preventive maintenance, and PCB-level repair; earlier electrical maintenance on industrial machinery (PLC, VFDs).</li>
-              </ul>
-            </div>
-          </li>
+  <!-- ============ EXPERIENCE (condensed) ============
+       EDIT: copy one .exp-item block to add a role. Full detail for
+       each version lives on the dedicated CV pages, linked below. -->
+  <section class="section" id="experience">
+    <h2 class="section-title">Experience</h2>
+    <p class="section-intro">A condensed view — see the Executive CV for full detail on every role.</p>
 
-        </ol>
-      </div>
-    </section>
-
-    <!-- TS-04 EDUCATION -->
-    <section id="education" class="station">
-      <div class="station-head">
-        <span class="station-code">[TS-04]</span>
-        <h2>Education</h2>
-      </div>
-      <div class="station-body">
-        <h3>B.Sc. — Industrial Electronics &amp; Control Engineering</h3>
-        <p class="org">Menoufia University, Faculty of Electronic Engineering · 2007 – 2013</p>
-      </div>
-    </section>
-
-    <!-- TS-05 SKILLS -->
-    <section id="skills" class="station">
-      <div class="station-head">
-        <span class="station-code">[TS-05]</span>
-        <h2>Technical Skills</h2>
-      </div>
-      <div class="station-body">
-        <div class="skill-row"><span class="skill-label">Test &amp; Quality</span><span>FCT · ICT · AOI · ISO 9001 · CAPA/NCR · FPY Tracking · Test Fixture Design</span></div>
-        <div class="skill-row"><span class="skill-label">Hardware &amp; Control</span><span>Oscilloscope · DMM · Logic Analyzer · PCB/PCBA Diagnostics · Altium Designer · PLC Siemens S7-200 · Embedded Systems</span></div>
-        <div class="skill-row"><span class="skill-label">Product &amp; Support</span><span>PRD/BRD · Go-to-Market · UAT · SLA/OLA Governance · SQL Scripting · AMI/AMR Systems · MS Office 365</span></div>
-      </div>
-    </section>
-
-    <!-- TS-06 CERTIFICATIONS -->
-    <section id="certifications" class="station">
-      <div class="station-head">
-        <span class="station-code">[TS-06]</span>
-        <h2>Certifications &amp; Professional Development</h2>
-      </div>
-      <div class="station-body">
-        <h3 class="sub-h">Technical Certifications</h3>
-        <ul class="cert-list">
-          <li>PLC Programming — Siemens S7-200 <span class="cert-year">Salesian Institute Don Bosco, 2013</span></li>
-          <li>Classic Control Systems <span class="cert-year">ACS Center, 2013</span></li>
-          <li>Microcontroller PIC Programming <span class="cert-year">Menoufia University, 2012</span></li>
-          <li>Schneider Electrical Distribution Systems <span class="cert-year">Egyptian Engineers Syndicate, 2019</span></li>
-        </ul>
-
-        <h3 class="sub-h">Professional Development (LinkedIn Learning)</h3>
-        <ul class="cert-list">
-          <li>
-            Succeeding as a First-Time Tech Manager <span class="cert-year">2022</span>
-            <a class="cert-link" href="documents/certificates/CertificateOfCompletion_Succeeding_as_a_FirstTime_Tech_Manager_2019.pdf" target="_blank">View certificate ↗</a>
-          </li>
-          <li>
-            Strategic Thinking <span class="cert-year">2022</span>
-            <a class="cert-link" href="documents/certificates/CertificateOfCompletion_Strategic_Thinking_2017.pdf" target="_blank">View certificate ↗</a>
-          </li>
-          <li>
-            Project Management Foundations: Requirements <span class="cert-year">2022</span>
-            <a class="cert-link" href="documents/certificates/CertificateOfCompletion_Project_Management_Foundations_Requirements.pdf" target="_blank">View certificate ↗</a>
-          </li>
-          <li>
-            Five Ways to Control Your Time <span class="cert-year">2023</span>
-            <a class="cert-link" href="documents/certificates/CertificateOfCompletion_Five_Ways_to_Control_Your_Time.pdf" target="_blank">View certificate ↗</a>
-          </li>
-          <li>
-            Tips for Writing Business Emails <span class="cert-year">2022</span>
-            <a class="cert-link" href="documents/certificates/CertificateOfCompletion_Tips_for_Writing_Business_Emails.pdf" target="_blank">View certificate ↗</a>
-          </li>
-        </ul>
-
-        <h3 class="sub-h">Languages</h3>
-        <p>Arabic (Native) · English (B2 — Professional Working Proficiency)</p>
-      </div>
-    </section>
-
-    <!-- TS-07 DOCUMENTS -->
-    <section id="documents" class="station">
-      <div class="station-head">
-        <span class="station-code">[TS-07]</span>
-        <h2>Documents</h2>
-      </div>
-      <div class="station-body">
-        <p class="station-intro">Every CV version and cover letter, ready to download.</p>
-        <div class="doc-grid">
-          <a class="doc-card" href="documents/Akmal_Aref_CV_Unified_Formatted.docx" download>
-            <span class="doc-tag">CV</span>
-            <span class="doc-title">Executive / Recruiter CV</span>
-            <span class="doc-sub">Full narrative version — .docx</span>
-          </a>
-          <a class="doc-card" href="documents/Akmal_Aref_CV_Unified_ATS.docx" download>
-            <span class="doc-tag">CV</span>
-            <span class="doc-title">ATS-Optimized CV</span>
-            <span class="doc-sub">Plain formatting for online systems — .docx</span>
-          </a>
-          <a class="doc-card" href="documents/Akmal_Aref_ProductManager_ATS.docx" download>
-            <span class="doc-tag">CV</span>
-            <span class="doc-title">Product Manager CV</span>
-            <span class="doc-sub">Tailored version — .docx</span>
-          </a>
-          <a class="doc-card" href="documents/Akmal_Aref_Service_Management_ATS.docx" download>
-            <span class="doc-tag">CV</span>
-            <span class="doc-title">Service Management CV</span>
-            <span class="doc-sub">Tailored version — .docx</span>
-          </a>
-          <a class="doc-card" href="documents/Akmal_Aref_FCT_Manufacturing_ATS.docx" download>
-            <span class="doc-tag">CV</span>
-            <span class="doc-title">PCBA Functional Test CV</span>
-            <span class="doc-sub">Tailored version — .docx</span>
-          </a>
-          <a class="doc-card" href="documents/Akmal_Aref_CV_OnePage_Print.docx" download>
-            <span class="doc-tag">CV</span>
-            <span class="doc-title">One-Page Print CV</span>
-            <span class="doc-sub">Condensed single page — .docx</span>
-          </a>
-          <a class="doc-card" href="documents/Akmal_Aref_CoverLetter.docx" download>
-            <span class="doc-tag">Letter</span>
-            <span class="doc-title">Universal Cover Letter</span>
-            <span class="doc-sub">.docx</span>
-          </a>
-          <a class="doc-card" href="documents/Akmal_Aref_ProductManager_CoverLetter.docx" download>
-            <span class="doc-tag">Letter</span>
-            <span class="doc-title">Product Manager Cover Letter</span>
-            <span class="doc-sub">.docx</span>
-          </a>
-          <a class="doc-card" href="documents/Akmal_Aref_Service_Management_CoverLetter.docx" download>
-            <span class="doc-tag">Letter</span>
-            <span class="doc-title">Service Management Cover Letter</span>
-            <span class="doc-sub">.docx</span>
-          </a>
-          <a class="doc-card" href="documents/Akmal_Aref_FCT_Manufacturing_CoverLetter.docx" download>
-            <span class="doc-tag">Letter</span>
-            <span class="doc-title">PCBA Test Cover Letter</span>
-            <span class="doc-sub">.docx</span>
-          </a>
+    <ul class="exp-list">
+      <li class="exp-item">
+        <div class="exp-row">
+          <span class="exp-role">PCBA Functional Test Section Head</span>
+          <span class="exp-dates">Mar 2025 – Jul 2026</span>
         </div>
-      </div>
-    </section>
+        <p class="exp-org">El Sewedy Electric – Iskraemeco Inc.</p>
+        <p class="exp-line">Led FCT operations for electricity meter PCBAs on a high-volume production line, operating automated test systems from SPEA, MATECH, INGUN &amp; NOFFZ.</p>
+      </li>
 
-    <!-- TS-08 CONTACT -->
-    <section id="contact" class="station station-contact">
-      <div class="station-head">
-        <span class="station-code">[TS-08]</span>
-        <h2>Contact</h2>
-      </div>
-      <div class="station-body">
-        <div class="contact-grid">
-          <a class="contact-item" href="mailto:akmalaref@icloud.com">
-            <span class="contact-label">Email</span>
-            <span class="contact-value">akmalaref@icloud.com</span>
-          </a>
-          <a class="contact-item" href="tel:+201065848683">
-            <span class="contact-label">Phone</span>
-            <span class="contact-value">+20 106 584 8683</span>
-          </a>
-          <a class="contact-item" href="https://linkedin.com/in/akmalaref" target="_blank" rel="noopener">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">linkedin.com/in/akmalaref</span>
-          </a>
-          <div class="contact-item">
-            <span class="contact-label">Location</span>
-            <span class="contact-value">Cairo, Egypt — open to relocation worldwide</span>
-          </div>
+      <li class="exp-item">
+        <div class="exp-row">
+          <span class="exp-role">Product Manager — Smart Metering</span>
+          <span class="exp-dates">Mar 2024 – Feb 2025</span>
         </div>
+        <p class="exp-org">El Sewedy Electric – Iskraemeco Inc.</p>
+        <p class="exp-line">Owned end-to-end lifecycle of the AMI/AMR meter portfolio: requirements, PRDs, go-to-market execution, and field pilots.</p>
+      </li>
+
+      <li class="exp-item">
+        <div class="exp-row">
+          <span class="exp-role">Service Management Section Head (Technical Support Team Leader)</span>
+          <span class="exp-dates">Jan 2020 – Feb 2024</span>
+        </div>
+        <p class="exp-org">El Sewedy Electric – Iskraemeco Inc.</p>
+        <p class="exp-line">Directed a multi-disciplinary support team; designed the L1/L2/L3 escalation framework that cut MTTR.</p>
+      </li>
+
+      <li class="exp-item">
+        <div class="exp-row">
+          <span class="exp-role">Technical Support Senior Engineer / Engineer</span>
+          <span class="exp-dates">Jul 2016 – Dec 2019</span>
+        </div>
+        <p class="exp-org">El Sewedy Electric – Iskraemeco Inc.</p>
+        <p class="exp-line">Field and remote support across the national AMI rollout; collaborated with software teams within sprint cycles.</p>
+      </li>
+
+      <li class="exp-item">
+        <div class="exp-row">
+          <span class="exp-role">Maintenance &amp; Production / Electrical Maintenance Engineer</span>
+          <span class="exp-dates">Sep 2015 – Jun 2016</span>
+        </div>
+        <p class="exp-org">El Sewedy Electric – Iskraemeco Inc. / New AlphaTex</p>
+        <p class="exp-line">Production line balancing, preventive maintenance, and PCB-level repair; earlier electrical maintenance on industrial machinery.</p>
+      </li>
+    </ul>
+  </section>
+
+
+  <!-- ============ CV BY TRACK ============
+       Links to the 3 downloadable ATS versions + the 2 full-read
+       versions + certificates. EDIT: add a card here for any new page. -->
+  <section class="section" id="tracks">
+    <h2 class="section-title">CV Versions</h2>
+    <p class="section-intro">
+      The three track versions below are downloadable Word documents built for ATS systems.
+      The Executive and ATS-Unified versions are best read directly on this site.
+    </p>
+
+    <div class="track-grid">
+      <a class="track-card" href="cv/product-manager.html">
+        <h3>Product Manager</h3>
+        <p>Tailored for product management roles — PRD ownership, roadmapping, go-to-market.</p>
+        <span class="btn btn-primary">View &amp; Download</span>
+      </a>
+      <a class="track-card" href="cv/service-management.html">
+        <h3>Service Management</h3>
+        <p>Tailored for support / service leadership roles — escalation frameworks, SLA governance.</p>
+        <span class="btn btn-primary">View &amp; Download</span>
+      </a>
+      <a class="track-card" href="cv/pcba-test.html">
+        <h3>PCBA Functional Test</h3>
+        <p>Tailored for manufacturing &amp; test engineering roles — FCT, FPY, ISO 9001.</p>
+        <span class="btn btn-primary">View &amp; Download</span>
+      </a>
+      <a class="track-card" href="cv/executive.html">
+        <h3>Executive CV</h3>
+        <p>Full narrative version for direct recruiter and hiring-manager review.</p>
+        <span class="btn btn-ghost">Read Online</span>
+      </a>
+      <a class="track-card" href="cv/ats-unified.html">
+        <h3>ATS-Unified CV</h3>
+        <p>Plain, keyword-forward version covering all three tracks.</p>
+        <span class="btn btn-ghost">Read Online</span>
+      </a>
+      <a class="track-card" href="certificates.html">
+        <h3>Certificates</h3>
+        <p>16 verifiable certificates — academic, technical, and professional development.</p>
+        <span class="btn btn-ghost">View All</span>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section">
+    <h2 class="section-title">Education</h2>
+    <p class="section-intro">
+      <strong>B.Sc. — Industrial Electronics &amp; Control Engineering</strong><br>
+      Menoufia University, Faculty of Electronic Engineering · 2007 – 2013<br>
+      <a href="certificates.html">View degree &amp; graduation certificates →</a>
+    </p>
+  </section>
+
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:akmalaref@icloud.com">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">akmalaref@icloud.com</span>
+      </a>
+      <a class="contact-item" href="tel:+201065848683">
+        <span class="contact-label">Phone</span>
+        <span class="contact-value">+20 106 584 8683</span>
+      </a>
+      <a class="contact-item" href="https://linkedin.com/in/akmalaref" target="_blank" rel="noopener">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">linkedin.com/in/akmalaref</span>
+      </a>
+      <div class="contact-item">
+        <span class="contact-label">Location</span>
+        <span class="contact-value">Cairo, Egypt — open to relocation worldwide</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
 
+  <!-- ============ FOOTER (same on every page) ============ -->
   <footer class="site-footer">
     <p>Built from the Akmal Aref Unified CV · Last updated 2026</p>
   </footer>

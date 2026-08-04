@@ -1,0 +1,468 @@
+/* ============================================================
+   SITE STYLES — home page, certificates gallery, track pages
+   Professional / editorial look. Requires variables.css to be
+   linked BEFORE this file in the HTML <head>.
+   ============================================================ */
+
+* { box-sizing: border-box; }                      /* makes width/padding math predictable everywhere */
+
+html { scroll-behavior: smooth; }                  /* smooth jump when clicking nav links */
+
+body {
+  margin: 0;                                       /* remove browser default spacing */
+  background: var(--color-bg);                     /* page background color */
+  color: var(--color-text);                        /* default text color */
+  font-family: var(--font-body);                    /* default body font */
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a { color: inherit; }                              /* links inherit surrounding text color by default */
+
+img { max-width: 100%; display: block; }           /* images never overflow their container */
+
+/* ---------- Top navigation bar ---------- */
+
+.site-header {
+  background: var(--color-bg-deep);                /* dark band across the very top */
+  color: var(--color-text-on-dark);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: var(--color-text-on-dark);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--color-text-on-dark-soft);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible { color: var(--color-gold); }   /* gold highlight on hover — the one accent color used sparingly */
+
+/* Hamburger button — only visible on narrow screens */
+.nav-toggle {
+  display: none;                     /* hidden by default (desktop shows full nav-links) */
+  background: none;
+  border: 1px solid var(--color-text-on-dark-soft);
+  color: var(--color-text-on-dark);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .nav-toggle { display: inline-block; }              /* show hamburger button on mobile */
+  .nav-links {
+    display: none;                                     /* hide full nav list by default on mobile */
+    width: 100%;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 10px;
+  }
+  .nav-links.is-open { display: flex; }                /* JS toggles this class to reveal the menu */
+}
+
+/* Portfolio link shown in the CV documents' header — EDIT this URL once the site is published */
+.portfolio-url-note {
+  font-size: 12px;
+  color: var(--color-text-on-dark-soft);
+}
+
+/* ---------- Hero (top of homepage) ---------- */
+
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 72px 24px 56px;
+}
+
+.hero-eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0 0 14px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);              /* CHANGE NAME here if needed */
+  font-weight: 600;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  margin: 0 0 10px;
+  color: var(--color-text);
+}
+
+.hero-role {
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);        /* CHANGE headline/role text here */
+  color: var(--color-text-soft);
+  max-width: 640px;
+  margin: 0 0 28px;
+}
+
+.hero-divider {
+  width: 64px;
+  height: 3px;
+  background: var(--color-gold);                  /* the single "signature" mark — a short gold rule */
+  border: none;
+  margin: 0 0 28px;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 20px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: var(--color-text-soft);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.status-pill .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 11px 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--color-accent);                /* main call-to-action button color */
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.btn-primary:hover { transform: translateY(-1px); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text);
+}
+
+.btn-ghost:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+.btn:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }  /* visible keyboard focus */
+
+/* ---------- Generic section wrapper ---------- */
+
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 56px 24px;
+  border-top: 1px solid var(--color-border);       /* thin quiet rule between sections */
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.section-intro {
+  color: var(--color-text-soft);
+  max-width: 64ch;
+  margin: 0 0 28px;
+}
+
+/* ---------- Summary paragraph ---------- */
+
+.summary-text p {
+  max-width: 72ch;
+  color: var(--color-text);
+}
+
+/* ---------- Competency chips ---------- */
+
+.chip-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.chip-grid li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);      /* thin accent edge — quiet, not glowing */
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 14.5px;
+}
+
+/* ---------- Experience preview list (home page) ---------- */
+
+.exp-list { list-style: none; margin: 0; padding: 0; }
+
+.exp-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.exp-item:last-child { border-bottom: none; }
+
+.exp-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 16px;
+}
+
+.exp-role {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.exp-dates {
+  font-size: 13px;
+  color: var(--color-text-soft);
+  white-space: nowrap;
+}
+
+.exp-org {
+  font-size: 13.5px;
+  color: var(--color-text-soft);
+  margin: 2px 0 8px;
+}
+
+.exp-item p.exp-line {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--color-text);
+}
+
+/* ---------- Track cards (Product Manager / Service Mgmt / PCBA) ---------- */
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.track-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  text-decoration: none;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.track-card:hover {
+  box-shadow: 0 8px 24px rgba(18, 35, 47, 0.08);   /* soft lift shadow on hover, no neon glow */
+  transform: translateY(-2px);
+}
+
+.track-card h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.track-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-soft);
+}
+
+.track-card .btn { align-self: flex-start; margin-top: 6px; }
+
+/* ---------- Documents / cover-letter cards ---------- */
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 16px 18px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.doc-card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
+
+.doc-tag {
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.doc-title { font-family: var(--font-display); font-weight: 600; font-size: 15px; }
+
+.doc-sub { font-size: 12.5px; color: var(--color-text-soft); }
+
+/* ---------- Certificates gallery ---------- */
+
+.cert-category { margin-bottom: 44px; }
+
+.cert-category h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 0 0 4px;
+}
+
+.cert-category .cat-note {
+  font-size: 13.5px;
+  color: var(--color-text-soft);
+  margin: 0 0 18px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.cert-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.cert-card:hover { box-shadow: 0 8px 24px rgba(18, 35, 47, 0.08); transform: translateY(-2px); }
+
+.cert-thumb {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;                                /* crop thumbnail neatly regardless of source image shape */
+  background: var(--color-accent-soft);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cert-card-body { padding: 14px 16px 16px; }
+
+.cert-name { font-weight: 600; font-size: 14px; margin: 0 0 4px; }
+
+.cert-issuer { font-size: 12.5px; color: var(--color-text-soft); margin: 0; }
+
+.cert-view {
+  font-size: 12.5px;
+  color: var(--color-accent);
+  margin-top: 8px;
+  display: inline-block;
+}
+
+/* ---------- Contact grid ---------- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.contact-item {
+  padding: 18px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-item:hover { border-color: var(--color-accent); }
+
+.contact-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-soft); }
+
+.contact-value { font-size: 14.5px; }
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--color-bg-deep);
+  color: var(--color-text-on-dark-soft);
+  text-align: center;
+  padding: 28px 24px;
+  font-size: 12.5px;
+}
+
+/* ---------- Small helper classes ---------- */
+
+.visually-hidden {                                  /* hides content visually but keeps it for screen readers */
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+
+a:focus-visible, button:focus-visible {              /* visible keyboard focus ring, site-wide */
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
