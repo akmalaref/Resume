@@ -196,6 +196,25 @@ img { max-width: 100%; display: block; }           /* images never overflow thei
 
 .btn:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }  /* visible keyboard focus */
 
+/* ---------- Career introduction video ---------- */
+
+.video-frame {
+  max-width: 760px;             /* keeps the video from stretching full-width on large screens */
+  margin: 0 auto;
+  border-radius: var(--radius);
+  overflow: hidden;             /* clips the video to the rounded corners */
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 28px rgba(18, 35, 47, 0.10);   /* soft lift, matches card shadows elsewhere */
+  background: #000;             /* letterboxing color if the video's aspect ratio doesn't fill the frame */
+}
+
+.intro-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;         /* standard widescreen frame — change if your video is a different ratio */
+}
+
 /* ---------- Generic section wrapper ---------- */
 
 .section {
