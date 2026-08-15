@@ -25,6 +25,7 @@
       <a class="nav-brand" href="index.html">Akmal Aref</a>
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#intro">Intro Video</a></li>
         <li><a href="index.html#summary">Summary</a></li>
         <li><a href="index.html#experience">Experience</a></li>
         <li><a href="cv/executive.html">Executive CV</a></li>
@@ -42,8 +43,8 @@
   <section class="hero">
     <p class="hero-eyebrow">Engineering &amp; Leadership Profile</p>
     <h1>Akmal Aref</h1>
-    <p class="hero-role">
-      Section Head — Service Management · Product Management · Manufacturing &amp; PCBA Test
+    <p class="hero-role" style="white-space: nowrap;">
+      Section Head — Service Management · Product Management · Manufacturing Engineering
     </p>
     <hr class="hero-divider" />
 
@@ -58,6 +59,59 @@
       <a class="btn btn-primary" href="cv/executive.html">Read Executive CV</a>
       <a class="btn btn-ghost" href="mailto:akmalaref@icloud.com">akmalaref@icloud.com</a>
       <a class="btn btn-ghost" href="https://linkedin.com/in/akmalaref" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </section>
+
+
+  <!-- ============ CAREER INTRODUCTION VIDEOS ============
+       EDIT: two self-hosted videos (not YouTube) — both play directly
+       on the page. The full version is the main landscape video; the
+       short one is a quick vertical/portrait clip next to it.
+
+       WHERE TO PUT YOUR FILES (exact names index.html already expects):
+         documents/video/career-introduction-full.mp4   (landscape, long)
+         documents/video/poster-full.jpg                 (already added ✓)
+         documents/video/career-introduction-short.mp4  (portrait, short)
+         documents/video/poster-short.jpg                (still needed)
+  -->
+  <section class="section video-section" id="intro">
+    <h2 class="section-title">Career Introduction</h2>
+    <p class="section-intro">Two ways to hear it from me — a quick 30&#8211;60&nbsp;second intro, or the full walkthrough of my background across manufacturing test, product management, and service leadership.</p>
+
+    <div class="video-grid">
+
+      <!-- Primary video: full-length, landscape -->
+      <div class="video-item video-item-full">
+        <p class="video-label">Full Introduction</p>
+        <div class="video-frame video-frame-landscape">
+          <video
+            class="intro-video"
+            controls
+            preload="metadata"
+            poster="documents/video/poster-full.jpg">
+            <source src="documents/video/career-introduction-full.mp4" type="video/mp4">
+            Your browser doesn't support embedded video.
+            <a href="documents/video/career-introduction-full.mp4">Download the video instead</a>.
+          </video>
+        </div>
+      </div>
+
+      <!-- Secondary video: short, portrait/vertical -->
+      <div class="video-item video-item-short">
+        <p class="video-label">Quick Intro</p>
+        <div class="video-frame video-frame-portrait">
+          <video
+            class="intro-video"
+            controls
+            preload="metadata"
+            poster="documents/video/poster-short.jpg">
+            <source src="documents/video/career-introduction-short.mp4" type="video/mp4">
+            Your browser doesn't support embedded video.
+            <a href="documents/video/career-introduction-short.mp4">Download the video instead</a>.
+          </video>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -94,6 +148,32 @@
   </section>
 
 
+  <!-- ============ CAREER AT A GLANCE (stat strip) ============
+       EDIT: four quick numbers pulled straight from the CV — change
+       the big number, the label under it, or add a 5th <div class="stat">
+       following the same pattern if you want more. -->
+  <section class="section stat-section">
+    <div class="stat-grid">
+      <div class="stat">
+        <p class="stat-number">11+</p>
+        <p class="stat-label">Years of Industry Experience</p>
+      </div>
+      <div class="stat">
+        <p class="stat-number">5</p>
+        <p class="stat-label">Roles, One Company — Field&nbsp;Engineer to Section&nbsp;Head</p>
+      </div>
+      <div class="stat">
+        <p class="stat-number">3</p>
+        <p class="stat-label">Career Tracks — Manufacturing, Product, Service</p>
+      </div>
+      <div class="stat">
+        <p class="stat-number">MTTR&nbsp;↓ FPY&nbsp;↑</p>
+        <p class="stat-label">Escalation &amp; Yield Metrics Improved Through Data-Driven Leadership</p>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ============ EXPERIENCE (condensed) ============
        EDIT: copy one .exp-item block to add a role. Full detail for
        each version lives on the dedicated CV pages, linked below. -->
@@ -108,7 +188,7 @@
           <span class="exp-dates">Mar 2025 – Jul 2026</span>
         </div>
         <p class="exp-org">El Sewedy Electric – Iskraemeco Inc.</p>
-        <p class="exp-line">Led FCT operations for electricity meter PCBAs on a high-volume production line, operating automated test systems from SPEA, MATECH, INGUN &amp; NOFFZ.</p>
+        <p class="exp-line">Led FCT operations for electricity meter PCBAs on a high-volume production line, <br>operating automated test systems from SPEA, MATECH, INGUN &amp; NOFFZ.</p>
       </li>
 
       <li class="exp-item">
@@ -173,7 +253,7 @@
       </a>
       <a class="track-card" href="cv/pcba-test.html">
         <h3>PCBA Functional Test</h3>
-        <p>Tailored for manufacturing &amp; test engineering roles — FCT, FPY, ISO 9001.</p>
+        <p>Tailored for manufacturing &amp; test engineering roles — FCT, FPY, <br>ISO 9001.</p>
         <span class="btn btn-primary">View &amp; Download</span>
       </a>
       <a class="track-card" href="cv/executive.html">
@@ -188,7 +268,7 @@
       </a>
       <a class="track-card" href="certificates.html">
         <h3>Certificates</h3>
-        <p>16 verifiable certificates — academic, technical, and professional development.</p>
+        <p>17 verifiable certificates — academic, technical, and professional development.</p>
         <span class="btn btn-ghost">View All</span>
       </a>
     </div>

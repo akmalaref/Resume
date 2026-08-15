@@ -196,11 +196,43 @@ img { max-width: 100%; display: block; }           /* images never overflow thei
 
 .btn:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }  /* visible keyboard focus */
 
-/* ---------- Career introduction video ---------- */
+/* ---------- Career introduction videos (full + short, side by side) ---------- */
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;              /* wraps to stacked on narrow screens */
+  gap: 28px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.video-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.video-item-full {
+  flex: 3 1 480px;              /* takes most of the row on desktop */
+  max-width: 640px;
+}
+
+.video-item-short {
+  flex: 1 1 220px;              /* narrower column for the vertical clip */
+  max-width: 260px;
+}
+
+.video-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text-soft);
+  text-align: center;
+  margin: 0;
+}
 
 .video-frame {
-  max-width: 760px;             /* keeps the video from stretching full-width on large screens */
-  margin: 0 auto;
   border-radius: var(--radius);
   overflow: hidden;             /* clips the video to the rounded corners */
   border: 1px solid var(--color-border);
@@ -211,8 +243,57 @@ img { max-width: 100%; display: block; }           /* images never overflow thei
 .intro-video {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;         /* standard widescreen frame — change if your video is a different ratio */
+  height: 100%;
+  object-fit: cover;
+}
+
+/* EDIT: change this ratio if your long video isn't standard widescreen */
+.video-frame-landscape .intro-video { aspect-ratio: 16 / 9; }
+
+/* EDIT: change this ratio if your short clip isn't a typical phone-portrait shape */
+.video-frame-portrait .intro-video { aspect-ratio: 9 / 16; }
+
+/* Stack the two videos full-width once the row gets too narrow to sit side by side */
+@media (max-width: 640px) {
+  .video-item-full, .video-item-short { flex: 1 1 100%; max-width: 420px; }
+}
+
+/* ---------- Career at a glance (stat strip) ---------- */
+
+.stat-section {
+  max-width: none;              /* full-bleed dark band, unlike the paper-colored sections around it */
+  padding: 44px 24px;
+  border-top: none;
+  background: var(--color-bg-deep);
+}
+
+.stat-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);   /* 4 across on desktop */
+  gap: 32px;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  color: var(--color-text-on-dark);
+  margin: 0 0 6px;
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-text-on-dark-soft);
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 760px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }   /* 2x2 on tablets/phones */
 }
 
 /* ---------- Generic section wrapper ---------- */

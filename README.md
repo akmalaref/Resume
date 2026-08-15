@@ -5,6 +5,13 @@ design (warm paper background, serif headings, single accent color that
 matches the CV documents) — no "engineering" theme, so it reads well to
 recruiters and hiring managers of any background.
 
+## Career introduction video
+
+There's a self-hosted (non-YouTube) video section right under the hero on
+the home page — see `documents/video/PUT_YOUR_VIDEO_HERE.md` for exactly
+what to name the file and where to drop it, plus notes on GitHub's file
+size limits and free compression tools if your export is too large.
+
 ## Site map
 
 ```
